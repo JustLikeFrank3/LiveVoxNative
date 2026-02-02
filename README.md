@@ -2,6 +2,15 @@
 
 A professional-grade real-time audio monitoring and analysis application built with React Native and Expo. LiveVoxNative provides low-latency audio input/output with advanced audio analysis capabilities including RMS metering, waveform visualization, and pitch detection.
 
+## 📚 Documentation
+
+- **[Quick Start Guide](QUICKSTART.md)** - Get up and running in 5 minutes
+- **[API Reference](modules/audio-engine/README.md)** - Complete audio engine API documentation
+- **[Code Examples](modules/audio-engine/EXAMPLES.md)** - Practical usage examples
+- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute to the project
+- **[Changelog](CHANGELOG.md)** - Version history and release notes
+- **[Documentation Overview](DOCS.md)** - Navigate all documentation
+
 ## Features
 
 - **Real-time Audio Monitoring**: Low-latency audio input and output using AVAudioEngine
