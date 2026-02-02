@@ -53,8 +53,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Android native folder and build scripts for local development
+- Android audio engine implementation (AudioRecord) with RMS + waveform events
+- Android microphone permission request flow
+- Android module autolinking configuration for `expo-audio-engine`
+- Shared cross-platform directory scaffold (components/hooks/lib)
+
+### Changed
+- Updated Android app identifiers and permissions in app configuration
+
+### Known Issues
+- Accurate round-trip latency measurement is unreliable on Android emulator
+
 ### Planned Features
-- Android support for audio engine
 - Audio recording functionality
 - Audio playback from files
 - Audio effects (reverb, echo, equalizer)
@@ -66,7 +78,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bluetooth audio device optimization
 
 ### Known Issues
-- Android platform not yet supported
 - Bluetooth audio devices may have higher latency in round-trip tests
 - Pitch detection works best with sustained notes (60-1000 Hz range)
 

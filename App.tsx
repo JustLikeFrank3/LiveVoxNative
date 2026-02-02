@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar'
 import { useEffect, useMemo, useState, useRef } from 'react'
-import { Pressable, StyleSheet, Text, View, ScrollView, Animated } from 'react-native'
+import { Pressable, StyleSheet, Text, View, ScrollView, Animated, Platform, PermissionsAndroid } from 'react-native'
 import Svg, { Polyline } from 'react-native-svg'
 import {
   addAudioAnalysisListener,
@@ -122,6 +122,22 @@ export default function App() {
       if (running) {
         await stop()
       } else {
+        if (Platform.OS === 'android') {
+          const granted = await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+            {
+              title: 'Microphone Permission',
+              message: 'LiveVox needs access to your microphone to monitor audio in real time.',
+              buttonPositive: 'Allow',
+              buttonNegative: 'Deny',
+            }
+          )
+
+          if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
+            setErrorMessage('Microphone permission denied.')
+            return
+          }
+        }
         await start()
       }
     } catch (error) {

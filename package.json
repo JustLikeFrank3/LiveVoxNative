@@ -5,8 +5,16 @@
   "scripts": {
     "start": "expo start",
     "android": "expo run:android",
+    "android:build": "cd android && ./gradlew assembleRelease",
     "ios": "expo run:ios",
-    "web": "expo start --web"
+    "ios:build": "cd ios && xcodebuild -workspace LiveVoxNative.xcworkspace -scheme LiveVoxNative -configuration Release",
+    "macos": "react-native run-macos",
+    "tvos": "react-native run-tvos",
+    "web": "expo start --web",
+    "prebuild": "expo prebuild",
+    "prebuild:android": "expo prebuild --platform android",
+    "prebuild:ios": "expo prebuild --platform ios",
+    "prebuild:clean": "expo prebuild --clean"
   },
   "dependencies": {
     "expo": "~54.0.32",

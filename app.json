@@ -27,11 +27,30 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
+      "permissions": [
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS"
+      ],
+      "package": "com.anonymous.livevoxnative",
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "platforms": {
+        "macos": {
+          "bundleIdentifier": "com.anonymous.LiveVoxNative.macOS",
+          "entitlements": {
+            "com.apple.security.device.audio-input": true
+          }
+        },
+        "tvos": {
+          "bundleIdentifier": "com.anonymous.LiveVoxNative.tvOS",
+          "supportedDevices": ["tv"]
+        }
+      }
     }
   }
 }

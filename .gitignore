@@ -18,6 +18,9 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
+# Android module build outputs
+modules/audio-engine/android/build/
+
 # Metro
 .metro-health-check*
 

@@ -1,8 +1,11 @@
 {
   "name": "expo-audio-engine",
-  "platforms": ["apple"],
+  "platforms": ["apple", "android"],
   "apple": {
     "modules": ["AudioEngineModule"],
     "podspecPath": "ios/ExpoAudioEngine.podspec"
+  },
+  "android": {
+    "modules": ["expo.modules.audioengine.AudioEngineModule"]
   }
 }
