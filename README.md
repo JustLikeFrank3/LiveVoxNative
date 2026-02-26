@@ -2,6 +2,12 @@
 
 A professional-grade real-time audio monitoring and analysis application built with React Native and Expo. LiveVoxNative provides low-latency audio input/output with advanced audio analysis capabilities including RMS metering, waveform visualization, and pitch detection.
 
+## Why
+
+Same problem as [LiveVox](https://github.com/JustLikeFrank3/LiveVox) -- feed the mic into the headphone mix so you can hear yourself without sounding like a jackass. This is the native iOS implementation using Swift AVAudioEngine, built to get real latency numbers on physical hardware rather than browser estimates.
+
+---
+
 ## 📚 Documentation
 
 - **[Quick Start Guide](QUICKSTART.md)** - Get up and running in 5 minutes
